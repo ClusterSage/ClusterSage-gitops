@@ -1,0 +1,12 @@
+frontend:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage-frontend
+    tag: staging-placeholder
+backend:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage-backend
+    tag: staging-placeholder
+gateway:
+  hostname: staging.nexaflow.site
+  hostnames:
+    - staging.nexaflow.site

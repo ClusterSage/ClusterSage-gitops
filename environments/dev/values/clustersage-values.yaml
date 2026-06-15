@@ -1,0 +1,12 @@
+frontend:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage-frontend
+    tag: dev-placeholder
+backend:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage-backend
+    tag: dev-placeholder
+gateway:
+  hostname: dev.nexaflow.site
+  hostnames:
+    - dev.nexaflow.site

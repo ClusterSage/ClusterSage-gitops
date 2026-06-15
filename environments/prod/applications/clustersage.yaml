@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: clustersage-prod
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: clustersage
+  sources:
+    - repoURL: https://github.com/ORG/ClusterSage-helm.git
+      targetRevision: main
+      path: charts/clustersage
+      helm:
+        valueFiles:
+          - values-prod.yaml
+          - $values/environments/prod/values/clustersage-values.yaml
+    - repoURL: https://github.com/ORG/ClusterSage-gitops.git
+      targetRevision: main
+      ref: values
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
