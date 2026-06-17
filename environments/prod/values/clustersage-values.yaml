@@ -5,7 +5,7 @@ frontend:
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: prod-placeholder
+    tag: c396235
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
@@ -13,7 +13,7 @@ emailWorker:
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: prod-placeholder
+    tag: c396235
 gateway:
   hostname: nexaflow.site
   hostnames:
