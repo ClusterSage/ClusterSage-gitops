@@ -6,6 +6,10 @@ backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage-backend
     tag: dev-placeholder
+emailWorker:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage-email-worker
+    tag: dev-placeholder
 gateway:
   hostname: dev.nexaflow.site
   hostnames:
