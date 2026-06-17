@@ -2,10 +2,39 @@ frontend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/frontend
     tag: bbb4b1e
+serviceAccount:
+  annotations:
+    azure.workload.identity/client-id: "89aa8bbd-863c-4c73-ad50-2735df059f9f"
+podLabels:
+  azure.workload.identity/use: "true"
+keyVault:
+  enabled: true
+  vaultName: kvclustersageprod
+  tenantId: e273e7a6-0676-4113-8575-ca2b6f3dd2ad
+  clientId: 89aa8bbd-863c-4c73-ad50-2735df059f9f
+  objects:
+    - name: database-url
+      alias: DATABASE_URL
+    - name: jwt-secret
+      alias: JWT_SECRET
+    - name: agent-token-secret
+      alias: AGENT_TOKEN_SECRET
+    - name: azure-storage-connection-string
+      alias: AZURE_STORAGE_CONNECTION_STRING
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
     tag: c396235
+  env:
+    APP_ENV: prod
+    PUBLIC_APP_URL: https://nexaflow.site
+    PUBLIC_API_URL: https://nexaflow.site
+    CORS_ALLOWED_ORIGINS: https://nexaflow.site,https://www.nexaflow.site
+    AZURE_STORAGE_CONTAINER: clustersage-data
+    AZURE_SERVICEBUS_FULLY_QUALIFIED_NAMESPACE: sb-clustersage-prod.servicebus.windows.net
+    CLUSTER_CONNECTED_QUEUE_NAME: cluster-connected
+    AZURE_COMMUNICATION_EMAIL_ENDPOINT: https://acs-clustersage-prod.unitedstates.communication.azure.com
+    EMAIL_SENDER_ADDRESS: donotreply@70b96c04-4b2f-402c-8e1e-724eb14fb782.azurecomm.net
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
