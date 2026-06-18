@@ -52,7 +52,7 @@ backend:
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
-    tag: c396235
+    tag: f9bf206
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
