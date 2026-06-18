@@ -30,7 +30,7 @@ backend:
     PUBLIC_APP_URL: https://nexaflow.site
     PUBLIC_API_URL: https://nexaflow.site
     CORS_ALLOWED_ORIGINS: https://nexaflow.site,https://www.nexaflow.site
-    AZURE_AI_FOUNDRY_ENDPOINT: ""
+    AZURE_AI_FOUNDRY_ENDPOINT: https://oaiclustersageprod.openai.azure.com/
     AZURE_AI_FOUNDRY_PROJECT_NAME: ""
     AZURE_AI_FOUNDRY_PROJECT_ID: ""
     AZURE_AI_FOUNDRY_DEPLOYMENT_NAME: gpt-4.1-mini
