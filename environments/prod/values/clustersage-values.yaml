@@ -24,7 +24,7 @@ keyVault:
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: f9bf206
+    tag: a6832e3
   env:
     APP_ENV: prod
     PUBLIC_APP_URL: https://nexaflow.site
@@ -56,7 +56,7 @@ emailWorker:
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: f9bf206
+    tag: a6832e3
 gateway:
   hostname: nexaflow.site
   hostnames:
