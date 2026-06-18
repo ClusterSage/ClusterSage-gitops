@@ -1,14 +1,14 @@
 frontend:
   image:
-    repository: acrclustersage.azurecr.io/clustersage-frontend
+    repository: acrclustersage.azurecr.io/clustersage/frontend
     tag: staging-placeholder
 backend:
   image:
-    repository: acrclustersage.azurecr.io/clustersage-backend
+    repository: acrclustersage.azurecr.io/clustersage/backend
     tag: staging-placeholder
 emailWorker:
   image:
-    repository: acrclustersage.azurecr.io/clustersage-email-worker
+    repository: acrclustersage.azurecr.io/clustersage/email-worker
     tag: staging-placeholder
 gateway:
   hostname: staging.nexaflow.site
