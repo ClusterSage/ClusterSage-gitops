@@ -9,7 +9,8 @@ backend:
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
-    tag: dev-placeholder
+    tag: b4766ce
+    digest: sha256:63b71653867ff72e61c156fba64456ea1a285ae7973de2feaea6e523e7f09d63
 gateway:
   hostname: dev.nexaflow.site
   hostnames:
