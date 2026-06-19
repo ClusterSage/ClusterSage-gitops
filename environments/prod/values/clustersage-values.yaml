@@ -2,6 +2,7 @@ frontend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/frontend
     tag: 386a493
+    digest: ""
 serviceAccount:
   annotations:
     azure.workload.identity/client-id: "89aa8bbd-863c-4c73-ad50-2735df059f9f"
@@ -25,6 +26,7 @@ backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
     tag: b995c79
+    digest: ""
   env:
     APP_ENV: prod
     PUBLIC_APP_URL: https://nexaflow.site
@@ -55,10 +57,12 @@ emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
     tag: 0994a0c
+    digest: ""
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
     tag: b995c79
+    digest: ""
 gateway:
   hostname: nexaflow.site
   hostnames:
