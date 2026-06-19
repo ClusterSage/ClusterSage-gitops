@@ -5,7 +5,8 @@ frontend:
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: dev-placeholder
+    tag: b4766ce
+    digest: sha256:53895ce4205548cc794e8225257a96cfe2b6f89030c686aaceb0b7bbc365b0de
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
@@ -15,3 +16,8 @@ gateway:
   hostname: dev.nexaflow.site
   hostnames:
     - dev.nexaflow.site
+migrationJob:
+  image:
+    repository: acrclustersage.azurecr.io/clustersage/backend
+    tag: b4766ce
+    digest: sha256:53895ce4205548cc794e8225257a96cfe2b6f89030c686aaceb0b7bbc365b0de
