@@ -1,8 +1,8 @@
 frontend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/frontend
-    tag: staging-placeholder
-    digest: ""
+    tag: 4b567b1
+    digest: "sha256:f26fcd28d8ed395ab83d8db0ddfa8d366556f97fa466dd2816ee4b675ee3a005"
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
