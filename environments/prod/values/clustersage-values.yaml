@@ -1,8 +1,8 @@
 frontend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/frontend
-    tag: 386a493
-    digest: ""
+    tag: v1.0.0
+    digest: "sha256:25fbee7d4d237de6993f04379f0e7eae18475804207a603cafce35097d10edbf"
 serviceAccount:
   annotations:
     azure.workload.identity/client-id: "89aa8bbd-863c-4c73-ad50-2735df059f9f"
