@@ -3,11 +3,60 @@ frontend:
     repository: acrclustersage.azurecr.io/clustersage/frontend
     tag: cd57a43
     digest: sha256:25fbee7d4d237de6993f04379f0e7eae18475804207a603cafce35097d10edbf
+serviceAccount:
+  annotations:
+    azure.workload.identity/client-id: "71e33e5b-086c-4d33-acc0-008f2233e51f"
+podLabels:
+  azure.workload.identity/use: "true"
+keyVault:
+  enabled: true
+  vaultName: kvclustersagedev01
+  tenantId: e273e7a6-0676-4113-8575-ca2b6f3dd2ad
+  clientId: 71e33e5b-086c-4d33-acc0-008f2233e51f
+  objects:
+    - name: database-url
+      alias: DATABASE_URL
+    - name: jwt-secret
+      alias: JWT_SECRET
+    - name: agent-token-secret
+      alias: AGENT_TOKEN_SECRET
+    - name: azure-storage-connection-string
+      alias: AZURE_STORAGE_CONNECTION_STRING
+    - name: azure-servicebus-connection-string
+      alias: AZURE_SERVICEBUS_CONNECTION_STRING
+    - name: azure-communication-email-connection-string
+      alias: AZURE_COMMUNICATION_EMAIL_CONNECTION_STRING
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
     tag: 46fa086
     digest: sha256:3dbd8952a83495ea2dd98f5e9f5b918d7015f5b216f8a91077393e91846db641
+  env:
+    APP_ENV: dev
+    PUBLIC_APP_URL: https://dev.nexaflow.site
+    PUBLIC_API_URL: https://dev.nexaflow.site
+    CORS_ALLOWED_ORIGINS: https://dev.nexaflow.site
+    AZURE_AI_FOUNDRY_ENDPOINT: ""
+    AZURE_AI_FOUNDRY_PROJECT_NAME: ""
+    AZURE_AI_FOUNDRY_PROJECT_ID: ""
+    AZURE_AI_FOUNDRY_DEPLOYMENT_NAME: ""
+    AZURE_AI_FOUNDRY_API_VERSION: 2024-05-01-preview
+    AZURE_CLIENT_ID: 71e33e5b-086c-4d33-acc0-008f2233e51f
+    AI_ANALYSIS_ENABLED: "false"
+    AI_CLUSTER_QUERY_ENABLED: "false"
+    ALERT_EVALUATION_ENABLED: "false"
+    ALERT_EVALUATION_INTERVAL_SECONDS: "60"
+    REMEDIATION_APPROVAL_ENABLED: "true"
+    AGENT_REMEDIATION_ENABLED: "false"
+    AI_MAX_LOG_LINES_PER_ANALYSIS: "200"
+    AI_MAX_TOKENS: "1200"
+    AI_TEMPERATURE: "0"
+    AI_PROMPT_VERSION: v1
+    AZURE_STORAGE_CONTAINER: clustersage-data
+    AZURE_SERVICEBUS_FULLY_QUALIFIED_NAMESPACE: sb-clustersage-dev.servicebus.windows.net
+    CLUSTER_CONNECTED_QUEUE_NAME: cluster-connected
+    AZURE_COMMUNICATION_EMAIL_ENDPOINT: https://acs-clustersage-dev.unitedstates.communication.azure.com
+    EMAIL_SENDER_ADDRESS: donotreply@414915c7-8c86-4370-a77f-6a44db1e063d.azurecomm.net
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
