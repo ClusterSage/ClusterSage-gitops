@@ -20,5 +20,9 @@ spec:
       targetRevision: main
       ref: values
   syncPolicy:
+    automated:
+      allowEmpty: false
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
