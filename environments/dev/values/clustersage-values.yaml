@@ -29,8 +29,8 @@ keyVault:
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: 30ca386
-    digest: sha256:225568d13c8052710599c502b4a4820b262b0ff6719c4412cb42cc7aaf1c496f
+    tag: 6566d43
+    digest: sha256:828b4ab589e40b3f384192bbd965e010da7be471f4a363670034fc7bbcf9d0c2
   env:
     APP_ENV: dev
     PUBLIC_APP_URL: https://dev.nexaflow.site
@@ -84,5 +84,5 @@ gateway:
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: 30ca386
-    digest: sha256:225568d13c8052710599c502b4a4820b262b0ff6719c4412cb42cc7aaf1c496f
+    tag: 6566d43
+    digest: sha256:828b4ab589e40b3f384192bbd965e010da7be471f4a363670034fc7bbcf9d0c2
