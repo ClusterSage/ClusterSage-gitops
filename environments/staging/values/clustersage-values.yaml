@@ -8,6 +8,22 @@ backend:
     repository: acrclustersage.azurecr.io/clustersage/backend
     tag: 46fa086
     digest: "sha256:3dbd8952a83495ea2dd98f5e9f5b918d7015f5b216f8a91077393e91846db641"
+  env:
+    AI_AGENT_ENABLED: "false"
+    AI_AGENT_MAX_TOOL_CALLS: "6"
+    AI_AGENT_MAX_ITERATIONS: "4"
+    AI_AGENT_MAX_CONTEXT_TOKENS: "12000"
+    AI_AGENT_MAX_HISTORY_MESSAGES: "8"
+    AI_AGENT_TOOL_TIMEOUT_SECONDS: "8"
+    AI_AGENT_REQUEST_TIMEOUT_SECONDS: "45"
+    AI_AGENT_MAX_DB_ROWS: "50"
+    AI_AGENT_MAX_LOG_MATCHES: "20"
+    AI_AGENT_MAX_BLOB_BYTES: "1048576"
+    AI_AGENT_MAX_BLOB_BATCHES: "8"
+    AI_AGENT_MAX_DOCUMENT_CHARACTERS: "4000"
+    AI_AGENT_KNOWLEDGE_BASE_MAX_RESULTS: "5"
+    AI_AGENT_LOG_MAX_TIME_RANGE_HOURS: "24"
+    AI_AGENT_PROMPT_VERSION: cluster-investigator-v1
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
