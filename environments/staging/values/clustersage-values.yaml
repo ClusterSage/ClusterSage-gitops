@@ -1,8 +1,8 @@
 frontend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/frontend
-    tag: cd57a43
-    digest: "sha256:25fbee7d4d237de6993f04379f0e7eae18475804207a603cafce35097d10edbf"
+    tag: 79f532b
+    digest: "sha256:e1166d3b4650a6503dd0154bbbbf26258ea79cb25bacdb1b4ffc429abccbc0f0"
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
