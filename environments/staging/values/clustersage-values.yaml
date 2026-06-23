@@ -6,8 +6,8 @@ frontend:
 backend:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: 46fa086
-    digest: "sha256:3dbd8952a83495ea2dd98f5e9f5b918d7015f5b216f8a91077393e91846db641"
+    tag: 36f6e3d
+    digest: "sha256:0e591acb732c1f098e3086b2338843e8dd49758e444e42008236fc8efb4de251"
   env:
     AI_AGENT_ENABLED: "false"
     AI_AGENT_MAX_TOOL_CALLS: "6"
@@ -32,8 +32,8 @@ emailWorker:
 migrationJob:
   image:
     repository: acrclustersage.azurecr.io/clustersage/backend
-    tag: 46fa086
-    digest: "sha256:3dbd8952a83495ea2dd98f5e9f5b918d7015f5b216f8a91077393e91846db641"
+    tag: 36f6e3d
+    digest: "sha256:0e591acb732c1f098e3086b2338843e8dd49758e444e42008236fc8efb4de251"
 gateway:
   hostname: stage.nexaflow.site
   hostnames:
