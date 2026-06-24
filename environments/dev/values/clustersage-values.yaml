@@ -75,8 +75,8 @@ backend:
 emailWorker:
   image:
     repository: acrclustersage.azurecr.io/clustersage/email-worker
-    tag: 1de5576
-    digest: sha256:b9d581e927d4228132b97f9bc7246ea84f413a92954da8de5dde9307e87f0f04
+    tag: a0c21ff
+    digest: sha256:8f88f59ce1dad5a83096a85afd6a99f215289337c4462f4dda0bd01c5af89cb0
 gateway:
   hostname: dev.nexaflow.site
   hostnames:
